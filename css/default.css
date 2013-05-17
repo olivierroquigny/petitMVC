@@ -1,0 +1,13 @@
+/*.menuV{
+	list-style-type: none;
+	margin: 0;
+}
+*/
+.menuV li{
+	display: inline;
+	padding: .5em 1em;
+}
+
+.menuV a{
+	text-decoration: none;
+}

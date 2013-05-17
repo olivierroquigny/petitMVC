@@ -1,0 +1,6 @@
+SetEnv PHP_VER 5_3
+Options +FollowSymLinks
+RewriteEngine On
+RewriteBase /
+RewriteRule ([0-9]+).php$ index.php?route=$1
+ErrorDocument 404 ./index.php?route=404
