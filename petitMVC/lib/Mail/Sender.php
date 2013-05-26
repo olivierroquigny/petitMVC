@@ -1,6 +1,6 @@
 <?php
 
-namespace Mail;
+namespace lib\Mail;
 
 /**
  * Aggregate and send a mail

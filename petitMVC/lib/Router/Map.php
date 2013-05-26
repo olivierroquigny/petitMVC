@@ -1,6 +1,6 @@
 <?php
 
-namespace Router;
+namespace lib\Router;
 
 /**
  * Map is where the routing infos are.
@@ -11,12 +11,12 @@ class Map{
 	 * this array list the actions as controller & method to execute for a route
 	 * @var array
 	 */
-	public $map = array(
+	protected $map = array(
 		0 => array(
 			'menu' => 'Home',
 			'url' => 'home-0.php',
-			'action' => array(
-				'class' => 'DefaultModule\Controller\Index', 
+			'controller' => array(
+				'class' => 'src\DefaultModule\Controller\Index', 
 				'method' => 'showIndex', 
 			),
 		),

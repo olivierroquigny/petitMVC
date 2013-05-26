@@ -1,8 +1,8 @@
 <?php
 
-namespace Router;
+namespace lib\Router;
 
-use Router\Map;
+use lib\Router\Map;
 
 /**
  * Router analyse the http request,
@@ -51,8 +51,8 @@ class Router{
 	 * @return string or false
 	 */
 	public function getActionClass(){
-		if(isset($this->map[$this->route]['action']) && isset($this->map[$this->route]['action']['class'])){
-			return $this->map[$this->route]['action']['class'];
+		if(isset($this->map[$this->route]['controller']) && isset($this->map[$this->route]['controller']['class'])){
+			return $this->map[$this->route]['controller']['class'];
 		}else{
 			return false;
 		}
@@ -63,10 +63,10 @@ class Router{
 	 * @return string or false
 	 */
 	public function getActionMethod(){
-		if(isset($this->map[$this->route]['action']) 
-		 && is_array($this->map[$this->route]['action']) 
-		 && isset($this->map[$this->route]['action']['method'])){ 
-			return $this->map[$this->route]['action']['method'];
+		if(isset($this->map[$this->route]['controller']) 
+		 && is_array($this->map[$this->route]['controller']) 
+		 && isset($this->map[$this->route]['controller']['method'])){ 
+			return $this->map[$this->route]['controller']['method'];
 		}else{
 			return false;
 		}

@@ -1,6 +1,6 @@
 <?php
 
-namespace Model;
+namespace lib\Model;
 
 /**
  * Model is used by model classes as a parent.

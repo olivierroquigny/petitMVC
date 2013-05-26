@@ -1,8 +1,8 @@
 <?php
 
-namespace View;
+namespace lib\View;
 
-use Filter\Html;
+use lib\Filter\Html;
 
 /**
  * Make an html form

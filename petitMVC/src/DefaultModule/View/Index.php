@@ -1,8 +1,8 @@
 <?php
 
-namespace DefaultModule\View;
+namespace src\DefaultModule\View;
 
-use View\View;
+use lib\View\View;
 
 class Index extends View{
 	

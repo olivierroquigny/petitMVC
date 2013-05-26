@@ -1,8 +1,8 @@
 <?php
 
-namespace DefaultModule\Model;
+namespace src\DefaultModule\Model;
 
-use Model\Model;
+use lib\Model\Model;
 
 class Index extends Model{
 	public $title = 'PetitMVC is a small PHP framework.';
@@ -12,7 +12,7 @@ class Index extends Model{
 	public $paragraphes = array(
 		0 => array(
 			'title' => 'Welcome in petitMVC!',
-			'text' => "PetitMVC is in Beta version now, it's work in progress!"
+			'text' => "PetitMVC is at the beggining, it's work in progress!"
 			,
 		),
 	);

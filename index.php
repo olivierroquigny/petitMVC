@@ -1,11 +1,11 @@
 <?php
 define('DEBUG_MODE', true);
-// TODO include_path => './petitMVC', and prefix classes with lib or src
-ini_set('include_path', './petitMVC/lib:./petitMVC/src');
+ini_set('include_path', '.' . DIRECTORY_SEPARATOR . 'petitMVC');
 define('INCLUDE_PATH', dirname(__FILE__) . DIRECTORY_SEPARATOR . 'petitMVC' . DIRECTORY_SEPARATOR);
-require('autoload.php');
 
-use Controller\FrontController;
+require( 'lib' . DIRECTORY_SEPARATOR . 'autoload.php');
+
+use lib\Controller\FrontController;
 
 try{
 	$controller = new FrontController();

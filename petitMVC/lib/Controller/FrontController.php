@@ -1,8 +1,8 @@
 <?php
 
-namespace Controller;
+namespace lib\Controller;
 
-use Router\Router;
+use lib\Router\Router;
 
 /**
  * FrontController is loaded first, 
@@ -13,9 +13,13 @@ class FrontController{
 	private $router;
 	private $action;
 
-	public function __construct(){
+	public function __construct($router = null){
 
-		$this->router = new Router();
+		if($router === null){
+			$this->router = new Router();
+		}else{
+			$this->router = $router;
+		}
 		
 		// if availlable, load the class and his action method
 		$class = $this->router->getActionClass();

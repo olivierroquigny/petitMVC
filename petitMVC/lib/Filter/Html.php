@@ -1,6 +1,6 @@
 <?php
 
-namespace Filter;
+namespace lib\Filter;
 
 /**
  * Filter input for html uses.

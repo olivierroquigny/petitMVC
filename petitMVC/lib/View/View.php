@@ -1,8 +1,8 @@
 <?php
 
-namespace View;
+namespace lib\View;
 
-use Filter\FileInclude;
+use lib\Filter\FileInclude;
 
 /**
  * Parent class for the personnalised views.

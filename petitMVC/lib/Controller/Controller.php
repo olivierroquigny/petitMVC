@@ -1,8 +1,8 @@
 <?php
 
-namespace Controller;
+namespace lib\Controller;
 
-use Router\Router;
+use lib\Router\Router;
 
 /**
  * Controller is a generic class extended by personnalised controllers.

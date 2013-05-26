@@ -1,6 +1,6 @@
 <?php
 
-namespace Filter;
+namespace lib\Filter;
 
 /**
  * FileInclude test file inclusion

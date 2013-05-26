@@ -1,11 +1,10 @@
 <?php
 
-namespace DefaultModule\Controller;
+namespace src\DefaultModule\Controller;
 
-use Controller\Controller;
-use DefaultModule\Model\Competences;
-use DefaultModule\Model\Index as ModelIndex;
-use DefaultModule\View\Index as ViewIndex;
+use lib\Controller\Controller;
+use src\DefaultModule\Model\Index as ModelIndex;
+use src\DefaultModule\View\Index as ViewIndex;
 
 class Index extends Controller{
 
