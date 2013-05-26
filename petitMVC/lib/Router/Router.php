@@ -26,11 +26,11 @@ class Router{
 	/**
 	 * Init the current route from the url request
 	 */
-	public function __construct(){
+	public function __construct($map = null){
 		if(true === isset($_GET['route']) && $_GET['route'] !== ''){
 			$this->route  = (int)$_GET['route'];
 		}
-		$this->setMap();
+		$this->setMap($map);
 		try{
 			$message = 'No router found: ';
 			if( ! isset($this->map)){
@@ -87,8 +87,10 @@ class Router{
 	/**
 	 * Set the map from Map class
 	 */	
-	public function setMap(){
-		$map = new Map();
+	public function setMap($map = null){
+		if($map === null){
+			$map = new Map();
+		}
 		$this->map = $map->getMap();
 	}
 
