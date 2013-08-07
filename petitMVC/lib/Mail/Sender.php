@@ -40,7 +40,7 @@ class Sender{
 	 * @param config
 	 *   array of config values
 	 */
-	private function init($config) {
+	protected function init($config) {
 		if(isset($config['to'])){
 			$this->to = $config['to'];
 		}
@@ -69,7 +69,7 @@ class Sender{
 	/**
 	 * Concat the diffrent part of the mail
 	 */
-	private function concat() {
+	protected function concat() {
 		$this->headers .= "MIME-Version : 1.0\r\n";
 		$this->headers .= 'Content-Type : multipart/alternative; boundary="' . $this->boundary . "\"\r\n";
 		if($this->replyTo !== ''){
@@ -103,7 +103,7 @@ class Sender{
 	 * Send the mail
 	 * @throw Exception if there is a problem to send the mail
 	 */
-	private function send(){
+	protected function send(){
 		$internal_encoding = mb_internal_encoding();
 		mb_internal_encoding('UTF-8');
 		$subject = mb_encode_mimeheader($this->cleanHeader($this->subject, 'UTF-8'));
@@ -133,7 +133,7 @@ class Sender{
 	 *   if it's html or not
 	 * @return string
 	 */
-	private function cleanBody($str, $html = false){
+	protected function cleanBody($str, $html = false){
 		// TODO: whitelist the body charaters
 		/**********************************************
 		http://tools.ietf.org/html/rfc5322#section-2.3
@@ -166,7 +166,7 @@ class Sender{
 	 *   the headers as a string
 	 * @return string
 	 */
-	private function cleanHeaders($str){
+	protected function cleanHeader($str){
 		/**********************************************
 		// TODO: whitelist the header charaters
 		http://tools.ietf.org/html/rfc5322#section-2.2
@@ -198,7 +198,7 @@ class Sender{
 	 *   the body as a string
 	 * @return string
 	 */
-	private function cleanAdress($str){
+	protected function cleanAdress($str){
 		// TODO: whitelist the email adress charaters
 		// a-z A-Z 0-9 ! # $ % & ' * + - / = ? ^ _ ` { | } ~
 
