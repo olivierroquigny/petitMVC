@@ -87,16 +87,16 @@ class Sender{
 			$this->message .= 'Content-Type : text/plain; charset="' . $this->cleanHeader($this->charset) . "\"\r\n";
 			$this->message .= "Content-Transfer-Encoding : 8bit\r\n";
 			$this->message .= "\r\n";
-			$this->message .= $this->text . "\r\n";
+			$this->message .= $this->cleanBody($this->text) . "\r\n";
 		}
 		if(isset($this->html) && $this->html !== ""){
 			$this->message .= '--' . $this->boundary . "\r\n";
 			$this->message .= 'Content-Type : text/html; charset="' . $this->cleanHeader($this->charset) . "\"\r\n";
 			$this->message .= "Content-Transfer-Encoding : 8bit\r\n";
 			$this->message .= "\r\n";
-			$this->message .= $this->html . "\r\n";
+			$this->message .= $this->cleanBody($this->html, true) . "\r\n";
 		}	
-		$this->message .= '--' . $this->boundary . "\r\n";		
+		$this->message .= '--' . $this->boundary . "--\r\n";		
 	}
 
 	/**
