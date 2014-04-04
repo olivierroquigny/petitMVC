@@ -13,7 +13,7 @@ class Index extends View{
 		$this->setStyles(array('css/default.css'));
 		$this->setContent($this->getContent());
 
-		parent::render();
+		echo parent::render();
 	}
 
 	protected function getContent($indent = ''){

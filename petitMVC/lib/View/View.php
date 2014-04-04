@@ -41,7 +41,7 @@ abstract class View{
 	 * render a template
 	 */
 	public function render(){
-		echo $this->getTemplate($this->layoutPath . DIRECTORY_SEPARATOR . $this->layout);
+		return $this->getTemplate($this->layoutPath . DIRECTORY_SEPARATOR . $this->layout);
 	}
 
 	/**
